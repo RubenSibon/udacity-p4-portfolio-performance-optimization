@@ -18,12 +18,12 @@
     "url": "git://github.com/rubenjs7/udacity-p4-portfolio-performance-optimization.git"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-concat": "~0.3.0",
+    "grunt": "~1.0.1",
+    "grunt-contrib-concat": "~1.0.1",
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-uglify": "^2.2.1",
     "grunt-responsive-images": "^1.10.1",
-    "matchdep": "~0.1.2"
+    "matchdep": "~1.0.1"
   },
   "dependencies": {
     "imagemin-mozjpeg": "^6.0.0"
