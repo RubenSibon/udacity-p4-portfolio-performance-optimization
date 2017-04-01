@@ -1,34 +1,27 @@
 module.exports = function(grunt) {
+
+  var mozjpeg = require('imagemin-mozjpeg');
+
   grunt.initConfig({
-    
-    clean: ['dist'],
 
-    ejs: {
-      all: {
-        options: {
-          // site-wide vars here
-        },
-        src: ['**/*.ejs', '!node_modules/**/*', '!_*/**/*'],
-        dest: 'dist/',
-        expand: true,
-        ext: '.html',
-      },
+    // Compress images
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'src/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'dist/'
+        }]
+      }
     },
 
-    copy: {
-      all: {
-        src: ['*.css', '*.html', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
-        dest: 'dist/',
-      },
-    },
-
-    browserify: {
-      all: {
-        src: 'app.js',
-        dest: 'dist/app.js'
-      },
-      options: {
-        transform: ['debowerify']
+    // Minify JavaScript files
+    uglify: {
+      my_target: {
+        files: {
+          'dest/output.min.js': ['src/input1.js', 'src/input2.js']
+        }
       }
     },
 
@@ -51,31 +44,17 @@ module.exports = function(grunt) {
         tasks: ['ejs'],
       },
 
-      js: {
-        files: '<%= browserify.all.src %>',
-        tasks: ['browserify'],
-      },
-
       assets: {
         files: ['assets/**/*', '*.css', '*.js', 'images/**/*', 'img/**/*', '!Gruntfile.js'],
         tasks: ['copy'],
       }
     },
-
-    'gh-pages': {
-      options: {
-        base: 'dist/'
-      },
-      src: ['**/*']
-    }
   });
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  
-  grunt.registerTask('default', ['clean', 'ejs', 'browserify', 'copy']);
-  
-  grunt.registerTask('server', ['default', 'connect', 'watch']);
 
-  grunt.registerTask('deploy', ['default', 'gh-pages']);
+  grunt.registerTask('default', ['imagemin', 'uglify']);
+
+  grunt.registerTask('server', ['default', 'connect', 'watch']);
 
 };
