@@ -1,4 +1,14 @@
-<<<<<<< HEAD
+## Udacity Frontend Nanodegree
+
+# Portfolio Performance Optimization
+
+Optimized website for maximum responsiveness and 60fps
+
+Try it out: [Demo](https://rjsibon.github.io/udacity-p4-portfolio-performance-optimization)
+
+
+# Original instructions from Udacity
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -55,6 +65,3 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
 * <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
 =======
-# udacity-p4-portfolio-performance-optimization
-Optimized website for maximum responsiveness and 60fps
->>>>>>> 971388be9d56227896a57c0331a6411ab0c1a1be
