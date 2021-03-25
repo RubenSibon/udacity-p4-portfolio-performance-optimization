@@ -2,10 +2,9 @@
 
 # Portfolio Performance Optimization
 
-Optimized website for maximum responsiveness and 60fps
+The assignment was to optimize a badly performing website for maximum responsiveness and 60fps.
 
-Try it out: [Demo](https://rjsibon.github.io/udacity-p4-portfolio-performance-optimization)
-
+---
 
 # Original instructions from Udacity
 
